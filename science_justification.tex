@@ -99,6 +99,7 @@
 \bibliographystyle{abbrvnat}  % or another style like abbrvnat, unsrtnat, etc.
 
 \usepackage[labelfont=bf,size=small]{caption}
+\usepackage{subcaption}
 %%
 %% The default LaTeX figure placement algorithm often causes large
 %% amounts of white space and pages devoid of text. The commands below
@@ -147,64 +148,86 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{center}
-\textbf{\large \textsc{\textsf{(MC)$^2$}}: The Magellanic Clouds Magellan Campaign.}
+\textbf{\large \textsc{\textsf{(MC)$^2$}}: The Magellanic Clouds Magellan Campaign}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% Name of lead investigator %%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Investigators:
-%%
-%% ENTER NAME BELOW
-Jesse Han, Erin Kado-Fong, Marta Nowotka, Susan Clark
+Investigators: Jesse Han, Erin Kado-Fong, Marta Nowotka, Susan Clark
 % Sophia Ridolfo, Scott Lucchini, Lisa Kewley
 % Emma Chickles, Kevin Burdge
-%%
-%%
 \end{center}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% Body of science justification %%%%%
-%%%%% and technical feasibility     %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% {\centering \textbf{Abstract}\\}
 
 \section{Scientific Justification}
 
-The Large and Small Magellanic Clouds (LMC and SMC) are the Milky Way's most prominent satellite galaxies, offering an ``outside-in'' view of galactic structure and evolution that is inaccessible for our own Galaxy. Furthermore, their proximity make them key laboratories for studying resolved stellar populations, star formation histories, and dynamical processes of galaxies. While extensive imaging and astrometric surveys have revolutionized our view of the Clouds, spectroscopic coverage remains sparse. Previous large spectroscopic efforts have primarily targeted the brightest and most massive stars with limited spatial sampling. Multi-epoch, contiguous spectroscopic surveys capable of resolving stellar motions across a wide range of stellar types are still largely absent.
+\textsc{\textsf{(MC)$^2$}} is a contiguous IFU survey of the central LMC with LLAMAS on Magellan, pursuing two goals: (i)~identify compact-object binaries via multi-epoch radial velocities (RV) of main-sequence turn-off and brighter stars, and (ii)~map the warm ionized ISM in Balmer and forbidden lines at \textbf{sub-parsec} resolution. In 2025B--2026A the team carried out a pilot of 8 nights covering a $\sim3'\times3'$ region centered on the LMC kinematic center at (RA, Dec) $=(80.90^\circ, -68.74^\circ)$ \citep{wan2020}. Our pipelines and analyses are mature: below we present \textbf{four concrete demonstrations from pilot data in hand} that motivate the 2026B request.
 
-\noindent LLAMAS will fundamentally change this landscape. Leveraging Magellan’s large mirror and LLAMAS’s exceptional throughput across the entire optical wavelengths, we will extend spectroscopic monitoring to far fainter stars ($r\sim21$, roughly the main sequence turn-off), achieving much higher target densities across the LMC and SMC than any previous survey. 10-minute exposures, repeated over multiple epochs, will allow us to identify radial velocity variables — including black hole / neutron star binaries and other exotic systems — with high precision. LLAMAS will also open a new regime for mapping the kinematics of the Clouds through their ordinary stellar populations, not just their most luminous members.
+\noindent\textbf{1.~Confident re-detection of VFTS~243 validates absolute RV precision (Fig.~\ref{fig:vfts}).} Our footprint contains VFTS~243, the O-star + $\ge 9\,\ms$ black-hole binary of \citet{shenar2022}, in a 10.4-day orbit. Across \textbf{8 independent epochs} spanning 5 months we recover the published orbit blind (without fitting any orbital parameters) at $\chi^2=5.8$ (8 d.o.f.) using He\,{\sc ii}\,5411. The scatter about the Shenar et al.\ ephemeris is $\sim5\,\kms$, and is consistent across benches, channels, and nights---demonstrating $\lesssim5\,\kms$ absolute RV zero-point stability after our per-fiber barycentric and sky-line wavelength calibration. This is the precision required to detect and characterize new compact-object binaries with \textsc{\textsf{(MC)$^2$}}.
 
-\begin{wrapfigure}{r}{0.4\textwidth}
-  \centering
-  \includegraphics[width=0.39\textwidth]{mc2_v3.png}
-\end{wrapfigure}
+\noindent\textbf{2.~A population of RV variable candidates in hand, more epochs needed.} A cross-correlation analysis against a self-template identifies \textbf{tens} of RV-variable candidates across the pilot footprint, including main-sequence turn-off stars as faint as $r\sim19.6$ (example in Fig.~\ref{fig:msp}). Because VFTS~243 was prioritized in the pilot, most candidates currently have only 2--4 epochs---enough to flag variability but insufficient to fold orbits or reject systematics. \textbf{The 2026B epochs are the decisive step}: they raise the epoch count by $\sim50\%$ across the field, enabling robust period searches and orbital solutions for the candidate sample. SMASH photometry \citep{nidever2017} predicts $\gtrsim$18{,}000 usable stars in the full (MC)$^2$ footprint, compared with $\sim$900 stars monitored by VLT-FLAMES \citep{vlt_flames}.
 
-\noindent We thus propose \textsc{\textsf{(MC)$^2$}}: the Magellanic Clouds Magellan Campaign. \textsc{\textsf{(MC)$^2$}} will tile the Clouds with LLAMAS, which will yield: (1) a catalog of radial velocity variables, (2) a deep, spatially resolved kinematic map of the LMC Center, and (3) emission line maps of the diffuse interstellar medium. \textsc{\textsf{(MC)$^2$}} is a multi-institutional effort within the Magellan consortium, comprising of Stanford (Jesse Han, Erin Kado-Fong, Marta Nowotka, Susan Clark), CfA (Sophia Ridolfo, Lisa Kewley), and MIT (Kevin Burdge, Emma Chickles).
+\noindent\textbf{3.~Sub-parsec maps of the warm ionized ISM (Fig.~\ref{fig:ism}).} IFU spectroscopy allows continuum-subtracted, velocity-resolved emission-line maps that no narrowband imaging survey can produce. Figure~\ref{fig:ism} shows our H$\alpha$ map \textbf{side-by-side with DeMCELS} \citep{points2024}, the current state-of-the-art wide-field LMC H$\alpha$ map (DECam 4\,m, PSF $\sim1''$). Over the same field (MC)$^2$ resolves filamentary structure, bubble rims, and sharp ionization fronts that DeMCELS smooths away. In addition, we produce [O\,{\sc iii}]\,5007, [N\,{\sc ii}]\,6548/84, and [S\,{\sc ii}]\,6717/31 maps at matching resolution, together with a per-spaxel H$\alpha$ Gaussian centroid kinematic map with $\sim5\,\kms$ precision---an entirely new capability for this region of the LMC and the foundation for quantitative studies of ISM mixing and structure (led by Kado-Fong, Nowotka, and Clark).
 
-\section{Observing Plan}
+\noindent\textbf{4.~Joint stellar-parameter + multi-epoch RV fitting with \texttt{MINESweeper} (Fig.~\ref{fig:msp}).} We have implemented a multi-epoch joint fitter built on \texttt{MINESweeper} \citep{cargile2020}: each star's $\log g$, $T_{\rm eff}$, $[\mathrm{Fe}/\mathrm{H}]$, and $[\alpha/\mathrm{Fe}]$ are held fixed across epochs while a per-epoch RV is fit jointly with broadband photometry and the LLAMAS spectrum. Leveraging the full stellar library and the shared SED boosts faint-star RV precision below what a blind single-epoch CCF can achieve. Figure~\ref{fig:msp} shows a test fit on a $r=19.6$ main-sequence turn-off candidate from the pilot. Demonstration 4 is the engine we will use to confirm the candidates of Demonstration 2.
 
-The initial campaign will contiguously tile a $6' \times 6'$ region $(90\text{ pc} \times 90\text{ pc}$ at 50 kpc) centered on the carbon star kinematic center at $(\mathrm{RA}, \mathrm{Dec.}) = (80.90^\circ,\, -68.74^\circ)$ \citep{wan2020}. We will use 10-minute exposures at each pointing. The LLAMAS field of view is $35" \times 34"$, and we adopt a fixed step size of $30"$, with $>4"$ overlap between adjacent fields to facilitate seamless tiling and calibration. Covering the full $6' \times 6'$ area requires 144 pointings, corresponding to 24 hours of exposure per epoch. We will obtain 6 such epochs, yielding a total of 144 hours of exposure. Assuming an average of 8 science hours per night (excluding overheads), the program can be completed in 18 nights. Splitting the time equally between Stanford, CfA, and MIT, we require 6 nights per institution. In 2026A, we request 3 nights (2 dark, 1 gray).
+\section{Stanford-led project}
 
-\section{Feasibility and justification of requested observing time}
+\textsc{\textsf{(MC)$^2$}} is a Stanford-led effort. Stanford postdoc \textbf{Jesse Han} conceived the campaign, designed its observing strategy, and has executed essentially all of the analysis shown above (VFTS~243 recovery, CCF variable search, H$\alpha$/[O\,{\sc iii}]/[N\,{\sc ii}]/[S\,{\sc ii}] maps, Gaussian kinematics, \texttt{MINESweeper} multi-epoch fitting). Stanford PhD student \textbf{Viraj Manwadkar} developed the improved LLAMAS reduction pipeline---specifically the MISTY sky subtraction and per-bench flux calibration---whose impact is visible in Figure~\ref{fig:reduction}. These corrections are what make accurate absolute RVs and continuum-subtracted line maps possible. The remaining Stanford collaborators (Kado-Fong, Nowotka, Clark) lead the ISM analysis strand.
 
-Based on a standard K-star spectrum, the LLAMAS exposure time calculator predicts a signal-to-noise ratio per pixel of $\sim5$ for an $r=21$ mag star in a single 10-minute exposure. Assuming a resolving power of $R = 2000$ and the detection of at least 10 spectral lines, we estimate a radial velocity (RV) precision of $\sim15~\mathrm{km\,s^{-1}}$ per single exposure. Stacking all six exposures per field improves the RV precision to $<10~\mathrm{km\,s^{-1}}$. For comparison, \textit{Gaia} proper motion uncertainties for similar stars correspond to transverse velocity errors exceeding $100~\mathrm{km\,s^{-1}}$. We will closely work with the LLAMAS team---which is based at MIT---in reducing the data. We will use the \texttt{MINESweeper} \citep{cargile2020} code to fit stellar spectra, of which Jesse Han is an expert user.
+\section{Observing plan and time request}
 
-Given the forecasted radial velocity precision and observing baseline, LLAMAS will be sensitive to radial velocity variations with semi-amplitudes greater than $\sim 50 \, \rm km\,s^{-1}$ and orbital periods shorter than a month. This sensitivity will enable a search for compact object binaries such as high-mass X-ray binaries and their progenitors. Such systems have already been detected in the LMC, most notably VFTS 243, an O star in a 10.4 day orbit around an unseen companion of at least 9 solar masses \citep{shenar2022}. The initial campaign will also include VFTS 243 as a test case. Of course, \textsc{\textsf{(MC)$^2$}} will be able to perform such a search for a much larger number of stars: in the SMASH survey \citep{nidever2017}, there are at least 500 stars per square arcmin at $r<20$ near this region in the LMC, so we can expect around 18,000 stars with reliable radial velocity measurements. In comparison, the VLT-FLAMES LMC survey \citep{vlt_flames} monitored around 900 stars with $V<17$.
+We request \textbf{3 nights (2 dark, 1 gray) in 2026B} to extend the pilot with additional epochs. The added time will (a)~confirm the Demonstration-2 RV variable candidates by filling in their light curves to 5--7 epochs, enabling orbital solutions, (b)~contiguously tile the current footprint to the full $6'\times6'$ region centered on the LMC kinematic center, covering the $1\sigma$ kinematic-center uncertainty of \citet{wan2020}, and (c)~deepen the ISM maps to reach [S\,{\sc ii}] diagnostic S/N in the diffuse regions between filaments. Exposures are 10\,min per pointing; with a $30''$ step, a single epoch of the full field requires 24 exposure-hours (3 nights at 8 hr/night excluding overheads). Earlier LLAMAS RV work by Chickles \& Burdge (AM CVn He\,{\sc ii} campaign) with an identical setup corroborates the feasibility of this cadence.
 
-In addition to discovering RV variables, the stacked radial velocity maps will allow us to determine the kinematic center of the LMC with unprecedented precision. Recent work by \citet{Han2025} reports strong evidence for a $\sim10^6 M_\odot$ supermassive black hole (SMBH) in the LMC. However, the exact location of the LMC’s dynamical center—and hence the most probable site of the SMBH—remains poorly constrained, due to uncertainties in proper motion measurements and sparse sampling of the internal velocity field. With the high target density and spatial coverage of the \textsc{\textsf{(MC)$^2$}} radial velocity map, we will be able to model the LMC’s rotational field far more accurately, and localize the SMBH candidate to within a few arcseconds. The $1\sigma$ uncetainty on the stellar kinematic center is $6'$ \citep{wan2020}, which sets the minimum size for this pilot survey.
-
-With line sensitivities on par with the SDSS-V Local Volume Mapper and 50 times better spatial resolution, yet another transformative product from \textsc{\textsf{(MC)$^2$}} will be deep, sub-pc (LLAMAS pixel $\simeq$ 0.18 pc, comparable to cloud scales of 0.1-10 pc) maps in key Balmer, [OIII], and [SII] diagnostic lines of the warm ionized medium in a low-mass satellite environment outside of well-studied star-forming complexes. Erin Kado-Fong and Marta Nowotka will use \textsc{\textsf{(MC)$^2$}} to quantify the nature of multiphase ISM mixing and structure via both multiscale structural metrics and sub-pc structural characterization of known filaments and cores in the \textsc{\textsf{(MC)$^2$}} footprint.
-
-We note that as of the proposal deadline, no \textsc{\textsf{(MC)$^2$}} observations have yet been carried out (the first night is November 9th, 2025). However, Emma Chickles and Kevin Burdge have previously obtained precise radial velocity measurements of an AM CVn system using the He II 4686 Å and He II 5411 Å lines in an earlier LLAMAS observation with an almost identical setup (10 m exposures over multiple epochs). This prior success demonstrates the team’s capability to effectively reduce and analyze the forthcoming data.
-
-% Enter text and figures showing that the proposed observations are feasible and that the exposure time requested for each target will be sufficient to make the required measurements; consider observing windows, time constraints, necessary signal-to-noise, etc. You should run simulations to predict what will actually be observed, or at the very least include realistic calculations to estimate signal to noise and required exposure time.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% Additional page of figures    %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-%-----------------------------Figure End--------------------------------
+%-----------------------------Figures Page--------------------------------
+
+% Fig 1: Stanford pipeline - full width, landscape (2:1 aspect)
+\begin{figure}[!t]
+  \centering
+  \includegraphics[width=0.90\textwidth]{reduction_demo.jpg}
+  \caption{\textbf{Stanford-developed pipeline enables (MC)$^2$.}
+  Pre (left) and post (right) MISTY sky-subtraction + per-bench flux-calibration
+  on one pilot field. Raw extraction shows horizontal bench stripes; after
+  Viraj Manwadkar's corrections the stellar field is photometrically flat.
+  All science below relies on this pipeline.}
+  \label{fig:reduction}
+\end{figure}
+
+% Fig 2: VFTS 243 RV - full width, very wide (3:1 aspect)
+\begin{figure}[!t]
+  \centering
+  \includegraphics[width=0.98\textwidth]{vfts243_rv_ccf.png}
+  \caption{\textbf{Demonstration 1: Confident re-detection of VFTS~243.}
+  8 pilot epochs of the LMC BH binary VFTS~243 \citep{shenar2022}. Left: RV
+  vs.\ orbital phase on the published ephemeris (\emph{no fit parameters
+  adjusted}); $\chi^2 = 5.8$ (8 d.o.f.). Right: He\,{\sc ii}\,5411 spectra
+  with CCF templates. Per-epoch RV precision $\sim5\,\kms$, with consistent
+  absolute zero-point across benches and nights.}
+  \label{fig:vfts}
+\end{figure}
+
+% Fig 3+4 side by side: DeMCELS/MC2 Ha (left) and MINESweeper (right)
+\begin{figure}[!t]
+  \centering
+  \begin{subfigure}[t]{0.58\textwidth}
+    \includegraphics[width=\textwidth]{demcels_vs_mc2.png}
+    \caption{\textbf{Demo 3: sub-parsec ISM maps.} Same LMC field in H$\alpha$.
+    \emph{Left:} DeMCELS narrow-band image (DECam 4\,m, \citealt{points2024}),
+    PSF $\sim1''$ --- the prior best wide-field LMC H$\alpha$ map.
+    \emph{Right:} LLAMAS-MC2 IFU at $0.3''$/spaxel, continuum-subtracted.
+    LLAMAS also delivers [O\,{\sc iii}]/[N\,{\sc ii}]/[S\,{\sc ii}] maps and
+    per-spaxel H$\alpha$ kinematics at $\sim5\,\kms$.}
+    \label{fig:ism}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.38\textwidth}
+    \includegraphics[width=\textwidth]{test_dva_p1.jpg}
+    \caption{\textbf{Demo 4: \texttt{MINESweeper} joint fit.}
+    $r\sim19.6$ pilot star, 4 epochs. Stellar parameters
+    $(\log g,\,T_{\rm eff},\,[\mathrm{Fe}/\mathrm{H}],\,[\alpha/\mathrm{Fe}])$
+    are held fixed across epochs while a per-epoch RV is fit jointly with
+    photometry and the LLAMAS spectrum --- the engine we will apply to the
+    Demo-2 candidates in 2026B.}
+    \label{fig:msp}
+  \end{subfigure}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% Additional page of references %%%%%
