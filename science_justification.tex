@@ -1,0 +1,221 @@
+%% LaTeX template for the science justification & technical
+%% feasibility for KIPAC Magellan profiles.
+%%
+%% Limit 2 pages of text plus an additional page for figures and tables
+%% Minimum 12 point font on letter paper with 1 inch margins.
+%% Do not change the font, page or margin settings in this template!
+%%
+%% Edit this template and then produce a PDF file:
+%%
+%% pdflatex sjtf_template_new
+%%
+%% If you do not have pdflatex available (pre-2005 TeX installations),
+%% then
+%% latex sjtf_template_new
+%% dvipdf sjtf_template_new
+%%
+%% or, if dvipdf is not available:
+%%
+%% latex sjtf_template_new
+%% dvips sjtf_template_new
+%% ps2pdf sjtf_template_new.ps
+%%
+%% where ps2pdf is available with ghostscript.
+%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Document format %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% DO NOT CHANGE THE FONT SIZE
+%%
+\documentclass[12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Page dimensions %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Minimum margin size is 1 inch from top, bottom, and sides.
+%% DO NOT CHANGE THE FOLLOWING LINE, IT IMPLEMENTS THE
+%% MANDATORY LIMITS.
+%% The science justification is strictly limited to 2 pages plus an additional page of figures, 12-point font on letter paper with 1-inch margins. 
+\usepackage[letterpaper,left=1in,right=1in,top=1in,bottom=1in,headheight=0pt]{geometry}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+%%
+%% Some very old LaTeX setups change these parameters. If your proposal
+%% text does not appear to be centered on letter page paper, modify
+%% these values appropriately.
+%%
+\setlength{\hoffset}{0in}
+\setlength{\voffset}{0in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Included packages %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Switch to Times Roman fonts w/compatible math.
+%% (Comment at will.)
+%%
+\usepackage{txfonts}
+%%
+%% Font spacing - gives better readability; this only works with
+%% pdflatex, xelatex and other modern LaTeX installations, it does not
+%% work with older (pre-2005) installations. If you get error
+%% messages, comment the next line.
+%%
+\usepackage{microtype}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% How to include figures %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% With the graphicx package, in a normal latex distribution, can be
+%% included using the \includegraphics command. The graphicx package
+%% is part of virtually all post-2005 LaTex distributions. If it is
+%% not available, use one of the older ways of including graphics in
+%% LaTeX, such as the graphics package. In the graphicx package, a
+%% figure is included with
+%% 
+%% \begin{figure}
+%% \includegraphics[key=val,key=val,...]{file}
+%% \end{figure}
+%%
+%% where some of the useful keys are: angle, width, height,
+%% keepaspectratio (='true' or 'false') and scale. Bounding box values
+%% can be given as [bb=llx lly urx ury].
+%% where ll denotes 'lower left' and ur 'upper right' and the x and y
+%% values are the coordinates of the image bounding box in
+%% points. There are 72 points in an inch.
+%%
+%% It is often better to ``trim'' white space away from the figure
+%% rather than specifying the bounding box -- the trim syntax is the
+%% same as the bb-syntax, with llx, lly, etc. defining the amount of
+%% space to be trimmed away from the edge of the image (again in
+%% points. 
+%%
+\usepackage{graphicx}
+\usepackage{natbib}
+\bibliographystyle{abbrvnat}  % or another style like abbrvnat, unsrtnat, etc.
+
+\usepackage[labelfont=bf,size=small]{caption}
+%%
+%% The default LaTeX figure placement algorithm often causes large
+%% amounts of white space and pages devoid of text. The commands below
+%% tweak the parameters to something that is more reasonable and
+%% should be sufficient to produce decent figure placement assuming
+%% that the \begin{figure}...\end{figure} text is placed close to the
+%% text where the figure should appear. When in doubt, use figure
+%% placement parameters.
+%%
+\setlength\belowcaptionskip{0pt}
+\setlength\abovecaptionskip{3pt}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.65}
+\renewcommand{\floatpagefraction}{0.95}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Section heading format %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+\makeatletter
+\renewcommand{\section}{\@startsection%
+{section}{1}{0mm}{-\baselineskip}%
+{0.5\baselineskip}{\normalfont\large\bfseries}}%
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Some useful abbreviations %%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+\newcommand{\ms}{\ensuremath{M_{\odot}}}
+\newcommand{\rs}{\ensuremath{R_{\odot}}}
+\newcommand{\ls}{\ensuremath{L_{\odot}}}
+\newcommand{\kms}{\ensuremath{\mathrm{km}\,\mathrm{s}^{-1}}}
+\newcommand{\fluxcgs}{\ensuremath{\mathrm{erg}\,\mathrm{s}^{-1}\,\mathrm{cm}^{-2}}}
+\newcommand{\lumcgs}{\ensuremath{erg}\,\mathrm{s}^{-1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Start of document %%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Title of proposal %%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+\textbf{\large \textsc{\textsf{(MC)$^2$}}: The Magellanic Clouds Magellan Campaign.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Name of lead investigator %%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Investigators:
+%%
+%% ENTER NAME BELOW
+Jesse Han, Erin Kado-Fong, Marta Nowotka, Susan Clark
+% Sophia Ridolfo, Scott Lucchini, Lisa Kewley
+% Emma Chickles, Kevin Burdge
+%%
+%%
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Body of science justification %%%%%
+%%%%% and technical feasibility     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% {\centering \textbf{Abstract}\\}
+
+\section{Scientific Justification}
+
+The Large and Small Magellanic Clouds (LMC and SMC) are the Milky Way's most prominent satellite galaxies, offering an ``outside-in'' view of galactic structure and evolution that is inaccessible for our own Galaxy. Furthermore, their proximity make them key laboratories for studying resolved stellar populations, star formation histories, and dynamical processes of galaxies. While extensive imaging and astrometric surveys have revolutionized our view of the Clouds, spectroscopic coverage remains sparse. Previous large spectroscopic efforts have primarily targeted the brightest and most massive stars with limited spatial sampling. Multi-epoch, contiguous spectroscopic surveys capable of resolving stellar motions across a wide range of stellar types are still largely absent.
+
+\noindent LLAMAS will fundamentally change this landscape. Leveraging Magellan’s large mirror and LLAMAS’s exceptional throughput across the entire optical wavelengths, we will extend spectroscopic monitoring to far fainter stars ($r\sim21$, roughly the main sequence turn-off), achieving much higher target densities across the LMC and SMC than any previous survey. 10-minute exposures, repeated over multiple epochs, will allow us to identify radial velocity variables — including black hole / neutron star binaries and other exotic systems — with high precision. LLAMAS will also open a new regime for mapping the kinematics of the Clouds through their ordinary stellar populations, not just their most luminous members.
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+  \centering
+  \includegraphics[width=0.39\textwidth]{mc2_v3.png}
+\end{wrapfigure}
+
+\noindent We thus propose \textsc{\textsf{(MC)$^2$}}: the Magellanic Clouds Magellan Campaign. \textsc{\textsf{(MC)$^2$}} will tile the Clouds with LLAMAS, which will yield: (1) a catalog of radial velocity variables, (2) a deep, spatially resolved kinematic map of the LMC Center, and (3) emission line maps of the diffuse interstellar medium. \textsc{\textsf{(MC)$^2$}} is a multi-institutional effort within the Magellan consortium, comprising of Stanford (Jesse Han, Erin Kado-Fong, Marta Nowotka, Susan Clark), CfA (Sophia Ridolfo, Lisa Kewley), and MIT (Kevin Burdge, Emma Chickles).
+
+\section{Observing Plan}
+
+The initial campaign will contiguously tile a $6' \times 6'$ region $(90\text{ pc} \times 90\text{ pc}$ at 50 kpc) centered on the carbon star kinematic center at $(\mathrm{RA}, \mathrm{Dec.}) = (80.90^\circ,\, -68.74^\circ)$ \citep{wan2020}. We will use 10-minute exposures at each pointing. The LLAMAS field of view is $35" \times 34"$, and we adopt a fixed step size of $30"$, with $>4"$ overlap between adjacent fields to facilitate seamless tiling and calibration. Covering the full $6' \times 6'$ area requires 144 pointings, corresponding to 24 hours of exposure per epoch. We will obtain 6 such epochs, yielding a total of 144 hours of exposure. Assuming an average of 8 science hours per night (excluding overheads), the program can be completed in 18 nights. Splitting the time equally between Stanford, CfA, and MIT, we require 6 nights per institution. In 2026A, we request 3 nights (2 dark, 1 gray).
+
+\section{Feasibility and justification of requested observing time}
+
+Based on a standard K-star spectrum, the LLAMAS exposure time calculator predicts a signal-to-noise ratio per pixel of $\sim5$ for an $r=21$ mag star in a single 10-minute exposure. Assuming a resolving power of $R = 2000$ and the detection of at least 10 spectral lines, we estimate a radial velocity (RV) precision of $\sim15~\mathrm{km\,s^{-1}}$ per single exposure. Stacking all six exposures per field improves the RV precision to $<10~\mathrm{km\,s^{-1}}$. For comparison, \textit{Gaia} proper motion uncertainties for similar stars correspond to transverse velocity errors exceeding $100~\mathrm{km\,s^{-1}}$. We will closely work with the LLAMAS team---which is based at MIT---in reducing the data. We will use the \texttt{MINESweeper} \citep{cargile2020} code to fit stellar spectra, of which Jesse Han is an expert user.
+
+Given the forecasted radial velocity precision and observing baseline, LLAMAS will be sensitive to radial velocity variations with semi-amplitudes greater than $\sim 50 \, \rm km\,s^{-1}$ and orbital periods shorter than a month. This sensitivity will enable a search for compact object binaries such as high-mass X-ray binaries and their progenitors. Such systems have already been detected in the LMC, most notably VFTS 243, an O star in a 10.4 day orbit around an unseen companion of at least 9 solar masses \citep{shenar2022}. The initial campaign will also include VFTS 243 as a test case. Of course, \textsc{\textsf{(MC)$^2$}} will be able to perform such a search for a much larger number of stars: in the SMASH survey \citep{nidever2017}, there are at least 500 stars per square arcmin at $r<20$ near this region in the LMC, so we can expect around 18,000 stars with reliable radial velocity measurements. In comparison, the VLT-FLAMES LMC survey \citep{vlt_flames} monitored around 900 stars with $V<17$.
+
+In addition to discovering RV variables, the stacked radial velocity maps will allow us to determine the kinematic center of the LMC with unprecedented precision. Recent work by \citet{Han2025} reports strong evidence for a $\sim10^6 M_\odot$ supermassive black hole (SMBH) in the LMC. However, the exact location of the LMC’s dynamical center—and hence the most probable site of the SMBH—remains poorly constrained, due to uncertainties in proper motion measurements and sparse sampling of the internal velocity field. With the high target density and spatial coverage of the \textsc{\textsf{(MC)$^2$}} radial velocity map, we will be able to model the LMC’s rotational field far more accurately, and localize the SMBH candidate to within a few arcseconds. The $1\sigma$ uncetainty on the stellar kinematic center is $6'$ \citep{wan2020}, which sets the minimum size for this pilot survey.
+
+With line sensitivities on par with the SDSS-V Local Volume Mapper and 50 times better spatial resolution, yet another transformative product from \textsc{\textsf{(MC)$^2$}} will be deep, sub-pc (LLAMAS pixel $\simeq$ 0.18 pc, comparable to cloud scales of 0.1-10 pc) maps in key Balmer, [OIII], and [SII] diagnostic lines of the warm ionized medium in a low-mass satellite environment outside of well-studied star-forming complexes. Erin Kado-Fong and Marta Nowotka will use \textsc{\textsf{(MC)$^2$}} to quantify the nature of multiphase ISM mixing and structure via both multiscale structural metrics and sub-pc structural characterization of known filaments and cores in the \textsc{\textsf{(MC)$^2$}} footprint.
+
+We note that as of the proposal deadline, no \textsc{\textsf{(MC)$^2$}} observations have yet been carried out (the first night is November 9th, 2025). However, Emma Chickles and Kevin Burdge have previously obtained precise radial velocity measurements of an AM CVn system using the He II 4686 Å and He II 5411 Å lines in an earlier LLAMAS observation with an almost identical setup (10 m exposures over multiple epochs). This prior success demonstrates the team’s capability to effectively reduce and analyze the forthcoming data.
+
+% Enter text and figures showing that the proposed observations are feasible and that the exposure time requested for each target will be sufficient to make the required measurements; consider observing windows, time constraints, necessary signal-to-noise, etc. You should run simulations to predict what will actually be observed, or at the very least include realistic calculations to estimate signal to noise and required exposure time.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Additional page of figures    %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+%-----------------------------Figure End--------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Additional page of references %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\bibliography{bib.bib}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% End of document %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
