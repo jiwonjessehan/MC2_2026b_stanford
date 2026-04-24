@@ -157,7 +157,11 @@ Investigators: Jesse Han, Erin Kado-Fong, Marta Nowotka, Susan Clark
 
 \section{Scientific Justification}
 
-\textsc{\textsf{(MC)$^2$}} is a contiguous IFU survey of the central LMC with LLAMAS on Magellan, pursuing two goals: (i)~identify compact-object binaries via multi-epoch radial velocities (RV) of main-sequence turn-off and brighter stars, and (ii)~map the warm ionized ISM in Balmer and forbidden lines at \textbf{sub-parsec} resolution. In 2025B--2026A the team carried out a pilot of 8 nights covering a $\sim3'\times3'$ region centered on the LMC kinematic center at (RA, Dec) $=(80.90^\circ, -68.74^\circ)$ \citep{wan2020}. Our pipelines and analyses are mature: below we present \textbf{four concrete demonstrations from pilot data in hand} that motivate the 2026B request.
+The Large Magellanic Cloud is the nearest star-forming disk galaxy to the Milky Way, providing an external vantage point on resolved stellar populations, compact-object binaries, and the multiphase interstellar medium at $\sim1\,\mathrm{pc}$ scales that no Galactic survey can access. Yet despite deep imaging (SMASH, \citealt{nidever2017}) and Gaia astrometry, \emph{spectroscopic} coverage of the LMC disk has been limited to the brightest OB stars and Wolf-Rayets (e.g.\ VLT-FLAMES, \citealt{vlt_flames}, $\sim900$ stars at $V<17$), leaving the main-sequence turn-off (MSTO) and most of the ISM unexplored. Multi-epoch, contiguous spectroscopy at MSTO depth is the decisive step for two science drivers: (i)~discovering and characterizing compact-object binaries --- the channel through which VFTS~243 \citep{shenar2022} and the hypervelocity-star tracers of a putative $10^6\,\ms$ LMC black hole \citep{han2025} were uncovered, and (ii)~resolving the warm ionized ISM on sub-parsec scales that connect to cloud-scale physics.
+
+\noindent\textsc{\textsf{(MC)$^2$}} --- The Magellanic Clouds Magellan Campaign --- is a contiguous LLAMAS IFU survey of the central LMC designed to deliver both. LLAMAS's combination of wide spectral coverage (3500--9500\,\AA), $R\sim2000$, IFU format, and Magellan's aperture yields $\sim5\,\kms$ RV precision on MSTO stars ($r\sim20$) in $10\,\mathrm{min}$ per epoch --- $\sim20\times$ more stars per arcmin$^2$ than VLT-FLAMES at the same cadence. The same data cubes simultaneously produce continuum-subtracted, velocity-resolved emission-line maps that no narrowband imaging survey can match (\S Demo~3 below).
+
+\noindent In 2025B--2026A the team carried out a pilot of 8 nights covering a $\sim3'\times3'$ region centered on the LMC kinematic center at (RA, Dec) $=(80.90^\circ, -68.74^\circ)$ \citep{wan2020}. Pipelines and analyses are now mature: below we present \textbf{four concrete demonstrations from pilot data in hand} that motivate the 2026B request.
 
 \noindent\textbf{1.~Confident re-detection of VFTS~243 validates absolute RV precision (Fig.~\ref{fig:vfts}).} Our footprint contains VFTS~243, the O-star + $\ge 9\,\ms$ black-hole binary of \citet{shenar2022}, in a 10.4-day orbit. Across \textbf{8 independent epochs} spanning 5 months we recover the published orbit blind (without fitting any orbital parameters) at $\chi^2=5.8$ (8 d.o.f.) using He\,{\sc ii}\,5411. The scatter about the Shenar et al.\ ephemeris is $\sim5\,\kms$, and is consistent across benches, channels, and nights---demonstrating $\lesssim5\,\kms$ absolute RV zero-point stability after our per-fiber barycentric and sky-line wavelength calibration. This is the precision required to detect and characterize new compact-object binaries with \textsc{\textsf{(MC)$^2$}}.
 
@@ -173,7 +177,9 @@ Investigators: Jesse Han, Erin Kado-Fong, Marta Nowotka, Susan Clark
 
 \section{Observing plan and time request}
 
-We request \textbf{3 nights (2 dark, 1 gray) in 2026B} to extend the pilot with additional epochs. The added time will (a)~confirm the Demonstration-2 RV variable candidates by filling in their light curves to 5--7 epochs, enabling orbital solutions, (b)~contiguously tile the current footprint to the full $6'\times6'$ region centered on the LMC kinematic center, covering the $1\sigma$ kinematic-center uncertainty of \citet{wan2020}, and (c)~deepen the ISM maps to reach [S\,{\sc ii}] diagnostic S/N in the diffuse regions between filaments. Exposures are 10\,min per pointing; with a $30''$ step, a single epoch of the full field requires 24 exposure-hours (3 nights at 8 hr/night excluding overheads). Earlier LLAMAS RV work by Chickles \& Burdge (AM CVn He\,{\sc ii} campaign) with an identical setup corroborates the feasibility of this cadence.
+We request \textbf{3 nights (2 dark, 1 gray) in 2026B} to extend the pilot. The added time will achieve three concrete goals. \textbf{(a)} \emph{Confirm the Demonstration-2 RV variable candidates} by filling in their light curves to 5--7 epochs, enabling period searches and orbital fits; this is the single most time-critical deliverable, since candidates flagged from 2--4 epochs cannot be distinguished from systematics without additional cadence. \textbf{(b)} \emph{Tile contiguously to the full $6'\times6'$ region} centered on the LMC kinematic center, covering the $1\sigma$ kinematic-center uncertainty \citep{wan2020} --- the minimum area needed to fit a rotation model that can localize the SMBH candidate \citep{han2025} to within a few arcseconds. \textbf{(c)} \emph{Deepen ISM maps} to reach [S\,{\sc ii}]/H$\alpha$ diagnostic S/N in the diffuse inter-filament medium, unlocking per-spaxel BPT-style classification of the warm ionized gas.
+
+Exposures are 10\,min per pointing; with a $30''$ step (and $>4''$ overlap between fields for seamless tiling and flux cross-calibration), a single epoch of the full $6'\times6'$ area requires $\sim24$ exposure-hours, or 3 nights at $\sim8$\,hr/night of useful time. The LLAMAS ETC predicts S/N$\sim5$ per pixel on an $r=21$ K-star in a 10-min exposure; the MINESweeper joint fit of Demo~4 drives per-star precision well below this single-epoch floor when combined across epochs. Earlier LLAMAS multi-epoch RV work by Chickles \& Burdge (AM\,CVn He\,{\sc ii} campaign) with an identical setup corroborates the feasibility of this cadence. This 2026B request is thus the direct continuation of a program that is already delivering LMC science.
 
 \clearpage
 %-----------------------------Figures Page--------------------------------
@@ -181,12 +187,14 @@ We request \textbf{3 nights (2 dark, 1 gray) in 2026B} to extend the pilot with 
 % Fig 1: Stanford pipeline - full width, landscape (2:1 aspect)
 \begin{figure}[!t]
   \centering
-  \includegraphics[width=0.90\textwidth]{reduction_demo.jpg}
+  \includegraphics[width=0.95\textwidth]{reduction_demo.png}
   \caption{\textbf{Stanford-developed pipeline enables (MC)$^2$.}
-  Pre (left) and post (right) MISTY sky-subtraction + per-bench flux-calibration
-  on one pilot field. Raw extraction shows horizontal bench stripes; after
-  Viraj Manwadkar's corrections the stellar field is photometrically flat.
-  All science below relies on this pipeline.}
+  Green-channel whitelight image of a pilot VFTS~243 field, pre (left) and
+  post (right) MISTY sky-subtraction + nearest-sky per-bench correction
+  developed by Viraj Manwadkar. Sky background is reduced by a factor of
+  $>10^3$ (med $=9.4\times10^4 \to 26$), stellar contamination of sky fibers
+  is removed, and horizontal bench stripes are eliminated --- all necessary
+  preconditions for the RV and ISM measurements presented below.}
   \label{fig:reduction}
 \end{figure}
 
